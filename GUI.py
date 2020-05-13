@@ -16,7 +16,7 @@ def add():
     
 def enter():
     print("opening recognizer..")
-    os.system("python3 /home/pi/Documents/det_and_recog/recognizeface2.py")
+    os.system("python3 /home/pi/Documents/det_and_recog/recognizeface.py")
 def check():
     mariadb_connection = mariadb.connect(user='samra', password='123456', database='securehome')
     cursor = mariadb_connection.cursor()
@@ -31,7 +31,7 @@ def check():
         t.delete(0,"end")
         t["state"]= "disabled"
         b3["state"]= "disabled"
-        os.system("python3 /home/pi/Documents/det_and_recog/trainface2.py")
+        os.system("python3 /home/pi/Documents/det_and_recog/trainface.py")
     else:
         print("incorrect password")
         

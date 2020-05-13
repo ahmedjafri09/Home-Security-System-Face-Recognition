@@ -87,6 +87,6 @@ if (mariadb_connection.is_connected()):
     mariadb_connection.close()
     print("MySQL connection is closed")
 
-os.system("python3 /home/pi/Documents/det_and_recog/trainrecognizer2.py")
+os.system("python3 /home/pi/Documents/det_and_recog/trainrecognizer.py")
 
 cv2.destroyAllWindows()
